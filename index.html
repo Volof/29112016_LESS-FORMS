@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="main.css">
+	<title>Forms</title>
+</head>
+<body>
+	<h1>Register for Miss Bakers Space Cadets</h1>
+		<fieldset><!-- Обгортка для форми -->
+			<legend>Personal details</legend> 
+				<div>
+					<label for="1_field">First Name
+						<input type="text" placeholder="First name only" required="" autofocus="" id="1_field"> <!-- ID відноситься до For label -->
+					</label>
+				</div>
+				<div>
+					<label for="2_field">Last Name
+						<input type="text" name="last_name" id="2_field" placeholder="Last name only" required="" autofocus=""> <!-- автофокус, сторінка автоматично опускається до рівня поля -->
+					</label>
+				</div>
+				<div>
+					<label>Date of Birth
+						<input type="date" name="date" required="" autofocus="">
+					</label>
+				</div>
+				<div>
+					<label>Email 
+			        	<input name="email" type="email" placeholder="satyroi@yahoo.com" required="" autofocus="">
+					</label> 
+				</div>
+				<div> 
+			        <label>URL 
+			        	<input name="url" type="url" placeholder="http://mysite.com" autofocus="">
+					</label> 
+			    </div>
+			    <div> 
+			        <label>Telephone 
+			        	<input name="phone" type="tel" placeholder="Eg. +447000 000000" required="" autofocus=""> 
+					</label> 
+			    </div>
+			    <div>
+			    	<label>Shoesize
+			    		<input type="number" required="" autofocus="" value="9" step="0.5" min="3" max="10" autofocus="">
+			    	</label>
+			    </div>
+			    <div>
+				    <form onsubmit="return false" oninput="level_out.value = f_level.valueAsNumber">
+						<label>Flying Skill level (1 low - 50 high)
+							<input name="f_level" type="range" min="1" max="50" value="25">
+							<output name="level_out">0</output>/50 LVL
+						</label>
+					</form>
+				</div>
+		</fieldset>	
+		<fieldset>
+			<legend>Billing address
+				<div>
+					<label>Address
+						<textarea style="resize:none" name="address" cols="50" rows="6" required="" autofocus=""></textarea>
+					</label>
+				</div>
+				<div> 
+			        <label>Post code 
+			        	<input name="postCode" type="text" required="">
+					</label> 
+			    </div>
+			    <div>
+			    	<label>Country
+			    		<input type="text" name="country" required="" list="111"> <!-- 111 -ідентифікатор списка країн -->
+			    		<datalist id="111">
+							 <option value="Текст1" label="Zimbabwe"></option>
+							 <option value="Iraq" label="Iraq"></option>
+							 <option value="Текст2" label="India"></option>
+						</datalist>
+			    	</label>
+			    </div>
+			</legend> 
+		</fieldset>
+		<fieldset>
+			<legend>Card details</legend>
+				<strong>Card type</strong> 
+		      <div class="card"> 
+		        <input id="visa" name="cardtype" type="radio"> 
+		        <label for="visa">VISA</label> 
+		        <input id="mastercard" name="cardtype" type="radio">
+		        <label for="mastercard">Mastercard</label> 
+		        <input id="amex" name="cardtype" type="radio"> 
+		        <label for="amex">AMEX</label>
+		      </div> 
+		    <div>
+				<label>Name of Cards
+		        	<input type="text" placeholder="Name as it appears on your card" required="" title="Назва карти">
+				</label>
+		    </div>
+		    <div> 
+		        <label>Card number 
+					<input type="number" required="" min="0" max="9" value="0000" title="Номер картки"> 
+				</label>
+	    	</div>
+	    	<div>
+	    		<label>Security code 
+		        	<input type="number" required="" title="Остані 3 цифри">
+				</label> 
+	    	</div>
+	    	<div> 
+		        <label>Expiry Date 
+					<input name="expiry" type="month">
+				</label>
+    		</div>
+		</fieldset>
+		<fieldset> 
+		  	<div> 
+		  		<label>Submit
+					<input type="submit" value="Place Order">
+				</label>
+		    </div> 
+  </fieldset>	
+</body>
+</html>
